@@ -1,8 +1,8 @@
 #include "main.h"
 
-/****************** PRINT POINTER ******************/
+/****************** MY OWN PRINT POINTER ******************/
 /**
- * print_pointer - Prints the value of a pointer variable
+ * myownprint_pointer - Prints the value of a pointer variable
  * @types: List a of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -11,7 +11,7 @@
  * @size: Size specifier
  * Return: Number of chars printed.
  */
-int print_pointer(va_list types, char buffer[],
+int myownprint_pointer(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	char extra_c = 0, padd = ' ';
@@ -52,10 +52,10 @@ int print_pointer(va_list types, char buffer[],
 		width, flags, padd, extra_c, padd_start));
 }
 
-/************************* PRINT NON PRINTABLE *************************/
+/************************* MY OWN PRINT NON PRINTABLE *************************/
 /**
- * print_non_printable - Prints ascii codes in hexa of non printable chars
- * @types: Lista of arguments
+ * myownprint_non_printable - Prints ascii codes in hexa of non printable chars
+ * @types: Listing a of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
  * @width: get width
@@ -63,7 +63,7 @@ int print_pointer(va_list types, char buffer[],
  * @size: Size specifier
  * Return: Number of chars printed
  */
-int print_non_printable(va_list types, char buffer[],
+int myownprint_non_printable(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	int i = 0, offset = 0;
@@ -92,9 +92,9 @@ int print_non_printable(va_list types, char buffer[],
 	return (write(1, buffer, i + offset));
 }
 
-/************************* PRINT REVERSE *************************/
+/************************* MY OWN PRINT REVERSE *************************/
 /**
- * print_reverse - Prints reverse string.
+ * myownprint_reverse - Prints reverse string.
  * @types: Lista of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
@@ -104,7 +104,7 @@ int print_non_printable(va_list types, char buffer[],
  * Return: Numbers of chars printed
  */
 
-int print_reverse(va_list types, char buffer[],
+int myownprint_reverse(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	char *str;
@@ -135,10 +135,10 @@ int print_reverse(va_list types, char buffer[],
 	}
 	return (count);
 }
-/************************* PRINT A STRING IN ROT13 *************************/
+/************************* MY OWN PRINT A STRING IN ROT13 *************************/
 /**
- * print_rot13string - Print a string in rot13.
- * @types: Lista of arguments
+ * myownprint_rot13string - Print a string in rot13.
+ * @types: List a of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
  * @width: get width
@@ -146,7 +146,7 @@ int print_reverse(va_list types, char buffer[],
  * @size: Size specifier
  * Return: Numbers of chars printed
  */
-int print_rot13string(va_list types, char buffer[],
+int myownprint_rot13string(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
 	char x;
